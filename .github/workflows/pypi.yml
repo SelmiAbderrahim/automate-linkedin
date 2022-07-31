@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+
+      - name: Check-out repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install setuptools twine wheel flake8
+          pip install -r requirements.txt
+      
+      - name: Lint with flake8
+        run: |
+          flake8 automate_linkedin
+      
+      # - name: Pypi
+      #   run: |
+      #     python setup.py sdist bdist_wheel
+      #     twine check dist/*
+      #     twine upload dist/* -u __token__ -p "${{ secrets.PYPI_API_TOKEN }}" --skip-existing --verbose

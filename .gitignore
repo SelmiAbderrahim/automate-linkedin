@@ -1,0 +1,8 @@
+venv
+env
+cookies
+api
+logs
+*.env
+**__pycache__
+*.log
