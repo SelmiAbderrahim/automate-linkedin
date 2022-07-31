@@ -8,6 +8,7 @@ So if you enjoy it, start it on [GitHub](https://github.com/SelmiAbderrahim/auto
 
    
 - [Features](#features)
+- [Installation](#installation)
 - [Usage options](#usage-options)
     - [2.1. Create driver](#21-create-driver)
     - [2.2. Login](#22-login)
@@ -36,6 +37,17 @@ So if you enjoy it, start it on [GitHub](https://github.com/SelmiAbderrahim/auto
   - Comment
 - Auto post/image publishing
    
+# Installation
+
+```
+pip install automate-linkedin
+```
+
+or
+
+```
+pip install git+https://github.com/SelmiAbderrahim/automate-linkedin
+```
 
 # Usage options
 

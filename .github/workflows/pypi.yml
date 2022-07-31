@@ -32,8 +32,8 @@ jobs:
         run: |
           flake8 automate_linkedin
       
-      # - name: Pypi
-      #   run: |
-      #     python setup.py sdist bdist_wheel
-      #     twine check dist/*
-      #     twine upload dist/* -u __token__ -p "${{ secrets.PYPI_API_TOKEN }}" --skip-existing --verbose
+      - name: Pypi
+        run: |
+          python setup.py sdist bdist_wheel
+          twine check dist/*
+          twine upload dist/* -u __token__ -p "${{ secrets.PYPI_API_TOKEN }}" --skip-existing --verbose
