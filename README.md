@@ -26,6 +26,7 @@ So if you enjoy it, start it on [GitHub](https://github.com/SelmiAbderrahim/auto
     - [CLI](#cli-3)
     - [API](#api-3)
 - [4. Environment variables](#4-environment-variables)
+- [5. Run it on a server](#5-run-it-on-a-server)
 
 
 <br><hr><br>
@@ -276,3 +277,91 @@ Then you gonna use it throught the cli:
 ```
 autoln --env --username LINKEDIN_EMAIL_ADDRESS --password LINKEDIN_PASSWORD
 ```
+
+# 5. Run it on a server
+
+I have tested the below code on my Ubuntu server, if someothing went wrong, please open a new issue.
+
+- The first thing you have to do is installing Chrome
+
+```
+sudo apt-get update
+sudo apt-get install google-chrome-stable
+google-chrome --version
+```
+
+- Login to your server
+
+```
+ssh user@ip
+```
+
+- Create a virtualenv
+
+**Linux/Mac**
+
+```
+python -m pip install virtualenv
+python -m virtualenv env
+source env/bin/activate
+```
+
+**Windows**
+
+```
+py -m pip install virtualenv
+py -m virtualenv env
+env\Scripts\activate
+```
+
+- Install `automate-linkedin`
+
+```
+pip install automate-linkedin
+```
+
+- Create a new `bash` file with the content below
+
+Let's assume this is my working directory
+
+```
+selmi@7BNVUM:/selmi$ pwd
+/home/selmi/automate-linkedin
+```
+
+Then we create a new file `like.sh` in that working directory.
+
+```
+#!/usr/bin/env bash
+SHELL=/bin/bash
+DISPLAY=:0
+PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+cd /home/selmi/automate-linkedin
+autoln --env --headless --username LINKEDIN_EMAIL_ADDRESS --password LINKEDIN_PASSWORD --post-interaction --like-post-comments --comment-number-likes 2 --post-number-likes 10 --auto-comment
+```
+
+Then for the permissions:
+
+```
+sudo chmod +x /home/selmi/automate-linkedin/likes.sh
+```
+
+- Environment variables [see this](#4-environment-variables)
+
+- Crontab
+
+and finally, we automate the process using crontab.
+
+```
+crontab -e
+```
+
+To run that bash file every 5 hours, add this line:
+
+```
+0 */5 * * * ./home/selmi/automate-linkedin/likes.sh
+```
+
+Then save it.
+
+That's it.

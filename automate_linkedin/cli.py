@@ -5,12 +5,18 @@ from easy_selenium.logger import logger
 from easy_selenium.authentication.login.linkedin import Login
 from easy_selenium.driver.chrome.driver import Driver
 from easy_selenium.common.funcs import driver_safe_quit
-from interactions import Posts
-from publish import Publish
-from network import (
-    Follow, Connect
-)
-
+try:
+    from interactions import Posts
+    from publish import Publish
+    from network import (
+        Follow, Connect
+    )
+except ModuleNotFoundError:
+    from .interactions import Posts
+    from .publish import Publish
+    from .network import (
+        Follow, Connect
+    )
 
 @click.command()
 @click.option(

@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as desc_file:
 
 setuptools.setup(
     name = "Automate LinkedIn",
-    version = "0.1.0",
+    version = "0.1.1",
     author = "Selmi Abderrahim",
     author_email = "contact@selmi.tech",
     long_description = long_description,
