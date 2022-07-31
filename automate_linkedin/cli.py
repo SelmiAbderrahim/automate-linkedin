@@ -18,6 +18,7 @@ except ModuleNotFoundError:
         Follow, Connect
     )
 
+
 @click.command()
 @click.option(
         "--username", "-u", type=str, help="Your LinkedIn email address.",

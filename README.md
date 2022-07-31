@@ -4,7 +4,11 @@ I built this project because I'm super lazy to check my LinkedIn account. <br>So
 And since I love sharing my stuff with others, I created this package. 
 So if you enjoy it, start it on [GitHub](https://github.com/SelmiAbderrahim/automate-linkedin).
 
-<br><br><br>
+<br>
+
+[![](https://i.ibb.co/R9J5nGm/imageedit-6-6834400292.jpg)](https://www.youtube.com/channel/UCmrvAIpkl1L8WlalusTRlnw)
+
+<br><br>
 
    
 - [Features](#features)
@@ -280,7 +284,7 @@ autoln --env --username LINKEDIN_EMAIL_ADDRESS --password LINKEDIN_PASSWORD
 
 # 5. Run it on a server
 
-I have tested the below code on my Ubuntu server, if someothing went wrong, please open a new issue.
+I have tested the below code on my Ubuntu server, if something went wrong, please open a new issue.
 
 - The first thing you have to do is installing Chrome
 
