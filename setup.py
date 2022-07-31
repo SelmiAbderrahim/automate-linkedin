@@ -10,6 +10,7 @@ setuptools.setup(
     author = "Selmi Abderrahim",
     author_email = "contact@selmi.tech",
     long_description = long_description,
+    long_description_content_type="text/markdown",
     url = "https://github.com/SelmiAbderrahim/automate-linkedin",
     projects_urls = {
         "Bug Tracker": "https://github.com/SelmiAbderrahim/automate-linkedin/issues"
