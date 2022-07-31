@@ -4,7 +4,7 @@ I built this project because I'm super lazy to check my LinkedIn account. <br>So
 And since I love sharing my stuff with others, I created this package. 
 So if you enjoy it, start it on [GitHub](https://github.com/SelmiAbderrahim/automate-linkedin).
 
-<br><br>
+<br><br><br>
 
    
 - [Features](#features)
