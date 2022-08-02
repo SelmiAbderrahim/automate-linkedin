@@ -142,7 +142,7 @@ Interact with the LinkedIn 'home page' or 'groups' posts.
 💡 **Example:** If I want to run a headless browser to like 20 posts and comment on any of these posts if possible.
 
 ```
-autoln --env --headless --username LINKEDIN_EMAIL_ADDRESS --password LINKEDIN_PASSWORD --post-interaction --auto-comment post-number-likes 25
+autoln --env --headless --username LINKEDIN_EMAIL_ADDRESS --password LINKEDIN_PASSWORD --post-interaction --auto-comment --post-number-likes 25
 ```
 
  ## API
